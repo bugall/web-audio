@@ -1,0 +1,28 @@
+{
+  "name": "parseMusic",
+  "description": "",
+  "main": "",
+  "authors": [
+    "bugall <bugall@sina.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "Chart.js": "~1.0.2",
+    "jqScroll": "~1.6.3",
+    "jquery": "~2.1.4",
+    "backbone": "~1.2.3",
+    "codemirror": "~5.8.0",
+    "bootstrap-switch": "~3.3.2"
+  }
+}

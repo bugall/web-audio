@@ -1,0 +1,87 @@
+.CodeMirror{
+	height:100%;
+}
+html,body{
+	min-height:100%;
+	height:100%;
+}
+.chartjs{
+	margin-top:20px;
+	min-height:38%;
+	height:38%;
+	border:#fff 1px solid;
+	background-color:#f3f3f3;
+	border-radius:5px;
+	padding:5px;
+}
+.result-list{
+	min-height:50%;
+	height:50%;
+	padding:10px;
+	background-color:#f3f3f3;
+	border:#fff 1px solid;
+	border-radius:5px;
+	padding:5px;
+}
+#chart-content{
+	height:100%;
+}
+#chart-content canvas{
+	cursor:Move;
+	width:100%;
+	height:100%;
+}
+.segment-list{
+	height:100%;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+.send .arrow {
+	position:absolute;
+	top:5px;
+	right:-14px; /* 圆角的位置需要细心调试哦 */
+	width:0;
+	height:0;
+	font-size:0;
+	border:solid 8px;
+	border-color:#f3f3f3 #f3f3f3 #f3f3f3 #5bc0de;
+	}
+.send{
+	position:relative;
+	width:150px;
+	height:35px;
+	background:#5bc0de;
+	border-radius:5px; /* 圆角 */
+	float:left;
+}
+.segment-list-titel{
+	height:60px;
+	width:100%;
+	background-color:#888;
+}
+.result-list ul li{
+	height:35px;
+	margin:10px 0px;
+}
+.result-list ul li .segment-time-content{
+	height:100%;
+	line-height:35px;
+	color:#888;
+	font-size:16px;
+}
+.result-list ul li .segment-time{
+	margin-right:20px;
+}
+.audio-play-left span,.audio-play-right span{
+	line-height:80px;
+	cursor:pointer;
+}
+.audio-play-left,.audio-play-right{
+	height:100%;
+	width:120px;
+	padding:0px 29px;
+	margin:auto;
+	line-height:100%;
+	border-radius:50%;
+	font-size:30px;
+}

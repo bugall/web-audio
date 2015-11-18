@@ -1,0 +1,19 @@
+{
+  "name": "jqScroll",
+  "description": "jQuery Plugin for Infinite Scrolling",
+  "version": "1.6.3",
+  "keywords": [
+    "jquery",
+    "scroll"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  },
+  "licenses": [
+    {
+      "name": "MIT",
+      "url": "https://raw.githubusercontent.com/Linko91/jqScroll/master/LICENSE"
+    }
+  ],
+  "homepage": "https://github.com/Linko91/jqScroll.git"
+}
