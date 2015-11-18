@@ -232,7 +232,10 @@
         interpolate : /<#=([\s\S]+?)#>/g,
         escape      : /<#-([\s\S]+?)#>/g
     };
+    var lastClickObj,
+        currentClickObj;
     $(document).on('click','.audio-review',function(){
+        currentClickObj=$(this);
         var obj = $(this).parent().parent(),
             start=obj.attr('data-bg_time')-0.5,
             end=obj.attr('data-ed_time')-0.5;
@@ -247,7 +250,48 @@
         setTimeout(function(){
             clearInterval(reviewTimer);
         },((end-start).toFixed(1))*1000);
+        //选中状态
+        if(lastClickObj){
+            itemStatut(lastClickObj,'#888');
+        }
+        itemStatut($(this),'#269abc');
+        lastClickObj=$(this);
     })
-
+    function itemStatut(obj,color){
+        obj.find('.send').css({'background-color':color});
+        obj.find('.arrow').css({'border-color':'#f3f3f3 #f3f3f3 #f3f3f3 '+color});
+    }
+    
+    function fixed(len,data){
+        return data.toFixed(1);
+    }
+    $(document).on('click','.left-left',function(){
+        var obj = currentClickObj.parent().parent(),
+            time=obj.attr('data-bg_time');
+        obj.attr('data-bg_time',fixed(1,time-0.5));
+        var old = obj.find('.segment-time').text();
+        obj.find('.segment-time').text(fixed(1,old-0+0.5));
+    })
+    $(document).on('click','.left-right',function(){
+        var obj = currentClickObj.parent().parent(),
+            time=obj.attr('data-bg_time');
+        obj.attr('data-bg_time',fixed(1,time-0+0.5));
+        var old = obj.find('.segment-time').text();
+        obj.find('.segment-time').text(fixed(1,old-0.5));
+    })
+    $(document).on('click','.right-left',function(){
+        var obj = currentClickObj.parent().parent(),
+            time=obj.attr('data-ed_time');
+        obj.attr('data-ed_time',fixed(1,time-0.5));
+        var old = obj.find('.segment-time').text();
+        obj.find('.segment-time').text(fixed(1,old-0.5));
+    })
+    $(document).on('click','.right-right',function(){
+        var obj = currentClickObj.parent().parent(),
+            time=obj.attr('data-ed_time');
+        obj.attr('data-ed_time',fixed(1,time-0+0.5));
+        var old = obj.find('.segment-time').text();
+        obj.find('.segment-time').text(fixed(1,old-0+0.5));
+    })
 })()
 
